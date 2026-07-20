@@ -7,19 +7,24 @@
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body { font-family: 'Segoe UI', Arial, sans-serif; background-color: #f4f6f9; color: #333; line-height: 1.6; padding: 20px; }
-        .container { max-width: 850px; margin: 30px auto; background: #ffffff; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); padding: 40px; }
+        .container { max-width: 900px; margin: 30px auto; background: #ffffff; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); padding: 40px; }
         header { border-bottom: 3px solid #003366; padding-bottom: 20px; margin-bottom: 30px; }
         h1 { color: #003366; font-size: 2rem; margin-bottom: 5px; }
         .designation { font-weight: 600; color: #0055a5; font-size: 1.1rem; }
         .degrees { color: #666; font-size: 0.95rem; margin-top: 5px; }
         .card { background: #f8fafc; border-left: 4px solid #003366; padding: 20px; border-radius: 6px; margin-bottom: 25px; }
         h2 { color: #003366; font-size: 1.3rem; margin-bottom: 12px; border-bottom: 1px solid #e2e8f0; padding-bottom: 5px; }
-        ul { list-style: none; }
-        li { padding: 12px 0; border-bottom: 1px dashed #e0e0e0; }
-        li:last-child { border-bottom: none; }
-        .course-title { font-weight: bold; color: #1a202c; font-size: 1.05rem; }
-        .btn-download { display: inline-block; margin-top: 8px; padding: 8px 14px; background-color: #003366; color: white; text-decoration: none; border-radius: 4px; font-size: 0.9rem; font-weight: 500; }
-        .btn-download:hover { background-color: #0055a5; }
+        
+        /* Course Section Styles */
+        details { background: #ffffff; border: 1px solid #cbd5e1; border-radius: 6px; margin-bottom: 12px; padding: 12px 16px; }
+        summary { font-weight: bold; color: #003366; cursor: pointer; font-size: 1.05rem; }
+        .folder-group { margin-top: 10px; padding-left: 15px; }
+        .sub-folder { margin-top: 8px; }
+        .sub-folder summary { color: #0055a5; font-size: 0.95rem; }
+        .week-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); gap: 8px; margin-top: 10px; padding-left: 10px; }
+        .week-link { display: block; text-align: center; background: #eef4fb; padding: 6px; border-radius: 4px; color: #003366; text-decoration: none; font-size: 0.85rem; font-weight: 600; border: 1px solid #bfdbfe; }
+        .week-link:hover { background: #003366; color: white; }
+        
         .contact-info { background: #eef4fb; padding: 20px; border-radius: 6px; font-size: 0.95rem; }
         .contact-info a { color: #0055a5; text-decoration: none; font-weight: bold; }
     </style>
@@ -36,21 +41,102 @@
 
         <div class="card">
             <h2>Welcome</h2>
-            <p>Welcome to my academic portal. This site serves as a centralized platform for undergraduate students to access lecture notes, course materials, lab manuals, and notices.</p>
+            <p>Welcome to my academic portal. Undergraduate students can access weekly slides, lecture notes, reference books, and notices below.</p>
         </div>
 
         <div class="card">
             <h2>Course Materials</h2>
-            <ul>
-                <li>
-                    <span class="course-title">EEE-1269: Electronic Circuits</span><br>
-                    <a href="#" class="btn-download">📂 View / Download Course Materials</a>
-                </li>
-                <li>
-                    <span class="course-title">EEE-1163: Introduction to Electrical Engineering</span><br>
-                    <a href="#" class="btn-download">📂 View / Download Course Materials</a>
-                </li>
-            </ul>
+
+            <!-- EEE-1269 -->
+            <details>
+                <summary>📘 EEE-1269: Electronic Circuits</summary>
+                <div class="folder-group">
+                    
+                    <!-- Slides (Week 1 to 14) -->
+                    <details class="sub-folder">
+                        <summary>📊 Slides (Weeks 1 – 14)</summary>
+                        <div class="week-grid">
+                            <a href="EEE-1269/Slides/Week-1/" class="week-link">Week 1</a>
+                            <a href="EEE-1269/Slides/Week-2/" class="week-link">Week 2</a>
+                            <a href="EEE-1269/Slides/Week-3/" class="week-link">Week 3</a>
+                            <a href="EEE-1269/Slides/Week-4/" class="week-link">Week 4</a>
+                            <a href="EEE-1269/Slides/Week-5/" class="week-link">Week 5</a>
+                            <a href="EEE-1269/Slides/Week-6/" class="week-link">Week 6</a>
+                            <a href="EEE-1269/Slides/Week-7/" class="week-link">Week 7</a>
+                            <a href="EEE-1269/Slides/Week-8/" class="week-link">Week 8</a>
+                            <a href="EEE-1269/Slides/Week-9/" class="week-link">Week 9</a>
+                            <a href="EEE-1269/Slides/Week-10/" class="week-link">Week 10</a>
+                            <a href="EEE-1269/Slides/Week-11/" class="week-link">Week 11</a>
+                            <a href="EEE-1269/Slides/Week-12/" class="week-link">Week 12</a>
+                            <a href="EEE-1269/Slides/Week-13/" class="week-link">Week 13</a>
+                            <a href="EEE-1269/Slides/Week-14/" class="week-link">Week 14</a>
+                        </div>
+                    </details>
+
+                    <!-- Notes -->
+                    <details class="sub-folder">
+                        <summary>📝 Class Notes</summary>
+                        <div style="padding: 10px 0 0 10px;">
+                            <a href="EEE-1269/Notes/" class="week-link" style="display:inline-block; padding: 6px 15px;">View Notes Folder</a>
+                        </div>
+                    </details>
+
+                    <!-- Books -->
+                    <details class="sub-folder">
+                        <summary>📚 Reference Books</summary>
+                        <div style="padding: 10px 0 0 10px;">
+                            <a href="EEE-1269/Books/" class="week-link" style="display:inline-block; padding: 6px 15px;">View Books Folder</a>
+                        </div>
+                    </details>
+
+                </div>
+            </details>
+
+            <!-- EEE-1163 -->
+            <details>
+                <summary>⚡ EEE-1163: Introduction to Electrical Engineering</summary>
+                <div class="folder-group">
+                    
+                    <!-- Slides (Week 1 to 14) -->
+                    <details class="sub-folder">
+                        <summary>📊 Slides (Weeks 1 – 14)</summary>
+                        <div class="week-grid">
+                            <a href="EEE-1163/Slides/Week-1/" class="week-link">Week 1</a>
+                            <a href="EEE-1163/Slides/Week-2/" class="week-link">Week 2</a>
+                            <a href="EEE-1163/Slides/Week-3/" class="week-link">Week 3</a>
+                            <a href="EEE-1163/Slides/Week-4/" class="week-link">Week 4</a>
+                            <a href="EEE-1163/Slides/Week-5/" class="week-link">Week 5</a>
+                            <a href="EEE-1163/Slides/Week-6/" class="week-link">Week 6</a>
+                            <a href="EEE-1163/Slides/Week-7/" class="week-link">Week 7</a>
+                            <a href="EEE-1163/Slides/Week-8/" class="week-link">Week 8</a>
+                            <a href="EEE-1163/Slides/Week-9/" class="week-link">Week 9</a>
+                            <a href="EEE-1163/Slides/Week-10/" class="week-link">Week 10</a>
+                            <a href="EEE-1163/Slides/Week-11/" class="week-link">Week 11</a>
+                            <a href="EEE-1163/Slides/Week-12/" class="week-link">Week 12</a>
+                            <a href="EEE-1163/Slides/Week-13/" class="week-link">Week 13</a>
+                            <a href="EEE-1163/Slides/Week-14/" class="week-link">Week 14</a>
+                        </div>
+                    </details>
+
+                    <!-- Notes -->
+                    <details class="sub-folder">
+                        <summary>📝 Class Notes</summary>
+                        <div style="padding: 10px 0 0 10px;">
+                            <a href="EEE-1163/Notes/" class="week-link" style="display:inline-block; padding: 6px 15px;">View Notes Folder</a>
+                        </div>
+                    </details>
+
+                    <!-- Books -->
+                    <details class="sub-folder">
+                        <summary>📚 Reference Books</summary>
+                        <div style="padding: 10px 0 0 10px;">
+                            <a href="EEE-1163/Books/" class="week-link" style="display:inline-block; padding: 6px 15px;">View Books Folder</a>
+                        </div>
+                    </details>
+
+                </div>
+            </details>
+
         </div>
 
         <div class="contact-info">
