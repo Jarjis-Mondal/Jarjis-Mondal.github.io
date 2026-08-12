@@ -8,7 +8,27 @@
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body { font-family: 'Segoe UI', Arial, sans-serif; background-color: #f4f6f9; color: #333; line-height: 1.6; padding: 20px; }
         .container { max-width: 900px; margin: 30px auto; background: #ffffff; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); padding: 40px; }
-        header { border-bottom: 3px solid #003366; padding-bottom: 20px; margin-bottom: 30px; }
+        
+        /* Header & Profile Photo Alignment */
+        header { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            border-bottom: 3px solid #003366; 
+            padding-bottom: 20px; 
+            margin-bottom: 30px; 
+            gap: 20px;
+        }
+        .header-text { flex: 1; }
+        .profile-img { 
+            width: 125px; 
+            height: 125px; 
+            border-radius: 50%; 
+            object-fit: cover; 
+            border: 3px solid #003366; 
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
+
         h1 { color: #003366; font-size: 2rem; margin-bottom: 5px; }
         .designation { font-weight: 600; color: #0055a5; font-size: 1.1rem; }
         .degrees { color: #666; font-size: 0.95rem; margin-top: 5px; }
@@ -57,16 +77,25 @@
 
         .contact-info { background: #eef4fb; padding: 20px; border-radius: 6px; font-size: 0.95rem; }
         .contact-info a { color: #0055a5; text-decoration: none; font-weight: bold; }
+
+        /* Responsive view for mobile screens */
+        @media (max-width: 600px) {
+            header { flex-direction: column-reverse; text-align: center; }
+            .profile-img { width: 110px; height: 110px; }
+        }
     </style>
 </head>
 <body>
 
     <div class="container">
         <header>
-            <h1>Md. Jarjis Mondal</h1>
-            <p class="designation">Lecturer, Department of EEE</p>
-            <p>Bangladesh Army University of Science and Technology (BAUST), Saidpur</p>
-            <p class="degrees">B.Sc. in EEE (BUET) | M.Sc. in EEE (DU, Ongoing)</p>
+            <div class="header-text">
+                <h1>Md. Jarjis Mondal</h1>
+                <p class="designation">Lecturer, Department of EEE</p>
+                <p>Bangladesh Army University of Science and Technology (BAUST), Saidpur</p>
+                <p class="degrees">B.Sc. in EEE (BUET) | M.Sc. in EEE (DU, Ongoing)</p>
+            </div>
+            <img src="profile.jpg" alt="Md. Jarjis Mondal" class="profile-img">
         </header>
 
         <div class="card">
@@ -77,22 +106,22 @@
         <div class="card">
             <h2>Course Materials</h2>
 
-            <!-- EEE-1269 -->
-            <div class="course-card">
-                <div>
-                    <div class="course-title">📘 EEE-1269: Electronic Circuits</div>
-                    <p class="course-desc">Slides, class notes, reference books & lab materials</p>
-                </div>
-                <a href="https://drive.google.com/drive/folders/151h9uNrNxmEn8fns4SjNrg-Kc9f1wI83?usp=sharing" target="_blank" class="drive-btn">📂 Open Google Drive ↗</a>
-            </div>
-
             <!-- EEE-1163 -->
             <div class="course-card">
                 <div>
                     <div class="course-title">⚡ EEE-1163: Introduction to Electrical Engineering</div>
-                    <p class="course-desc">Slides, class notes, reference books & lab materials</p>
+                    <p class="course-desc">Slides, class notes & reference books</p>
                 </div>
-                <a href="https://drive.google.com/drive/folders/1XbA6j9qbwmiuVJ4ocmJZP2eyFVuzcV2Q?usp=sharing" target="_blank" class="drive-btn">📂 Open Google Drive ↗</a>
+                <a href="https://drive.google.com/drive/folders/11yeIrPSxL60a5NKKo0sOItc73-FczMr7?usp=sharing" target="_blank" class="drive-btn">📂 Open Google Drive ↗</a>
+            </div>
+
+            <!-- EEE-1269 -->
+            <div class="course-card">
+                <div>
+                    <div class="course-title">📘 EEE-1269: Electronic Circuits</div>
+                    <p class="course-desc">Slides, class notes & reference books</p>
+                </div>
+                <a href="https://drive.google.com/drive/folders/1bdtDOtIqSNJ9QdVbSpylVR-lUGzJar1W?usp=sharing" target="_blank" class="drive-btn">📂 Open Google Drive ↗</a>
             </div>
 
         </div>
@@ -100,7 +129,7 @@
         <div class="contact-info">
             <h2>Contact Information</h2>
             <p><strong>Department of EEE</strong>, BAUST, Saidpur</p>
-            <p><strong>Email:</strong> <a href="mailto:1806068@eee.buet.ac.bd">1806068@eee.buet.ac.bd</a></p>
+            <p><strong>Email:</strong> <a href="mailto:jarjis@baust.edu.bd">jarjis@baust.edu.bd</a></p>
         </div>
     </div>
 
